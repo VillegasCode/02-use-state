@@ -37,3 +37,10 @@
     transform: rotate(360deg);
   }
 }
+
+#cambiar {
+  width: 20vmin;
+  height: 7vmin;
+  background-color: bisque;
+  color: black;
+}
