@@ -1,22 +1,34 @@
-import React from 'react'
+// Importando el hook useState
+import React, {useState} from 'react'
 
 export const MiPrimerEstado = () => {
   
-    let nombre = "Alex Villegas";
+    //Problemática
+    // let nombre = "Alex Villegas";
+
+    // const cambiarNombre = e => {
+    //     nombre = "Evita Velarde";
+    // };
+  
+
+    //Desestructurando un hook useState según la problemática anterior
+
+    const [ nombre, setNombre ] = useState("Evita Bonita");
 
     const cambiarNombre = e => {
-        nombre = "Evita Velarde";
-    };
-  
+        setNombre("Erick Villegas");
+    }
+
     return (
     <div>
         
         <h3>COMPONENTE: MiPrimerEstado</h3>
         <strong>
+            //Arriba esta desestructurado con el HOOk useState
             {nombre}
         </strong>
-
-        <button onClick={ cambiarNombre }Cambiar></button>
+        &nbsp;
+        <button id='cambiar' onClick={ cambiarNombre }>Cambiar</button>
     </div>
   )
 }
