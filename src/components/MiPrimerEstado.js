@@ -15,20 +15,30 @@ export const MiPrimerEstado = () => {
 
     const [ nombre, setNombre ] = useState("Evita Bonita");
 
-    const cambiarNombre = e => {
-        setNombre("Erick Villegas");
+    const cambiarNombre = (e, nombreFijo) => {
+        setNombre(nombreFijo);
+        console.log(e.target)
     }
 
     return (
     <div>
         
         <h3>COMPONENTE: MiPrimerEstado</h3>
-        <strong>
-            //Arriba esta desestructurado con el HOOk useState
+        <strong className='label'>
+            {/* //Arriba esta desestructurado con el HOOk useState */}
             {nombre}
         </strong>
         &nbsp;
-        <button id='cambiar' onClick={ cambiarNombre }>Cambiar</button>
+        <button id='cambiar' onClick={ e => cambiarNombre(e, "Erick") }>
+                    Cambiar Nombre
+        </button>
+
+        &nbsp;
+        {/* Con e.target.value estoy pasándole el valor que tiene allí mismo el propio input*/}
+        {/* <input onKeyUp={ e => cambiarNombre(e, e.target.value) } placeholder="Escribe tu nombre..." ></input> */}
+        
+        {/* El input hace lo mismo que el keyDown pero de forma más instantánea */}
+        <input onChange={ e => cambiarNombre(e, e.target.value) } placeholder="Escribe tu nombre..." ></input>
     </div>
   )
 }
