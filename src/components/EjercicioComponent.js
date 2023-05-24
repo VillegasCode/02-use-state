@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+// IMPORTAMOS PROP TYPES
+import PropTypes from "prop-types";
 
 export const EjercicioComponent = ({year}) => {
   
@@ -37,4 +39,8 @@ export const EjercicioComponent = ({year}) => {
         </p>
     </div>
   )
+}
+
+EjercicioComponent.propTypes = {
+  year: PropTypes.number.isRequired,
 }
