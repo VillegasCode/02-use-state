@@ -1,14 +1,14 @@
-1. Crear un componente llamado EjercicioComponent
+1. Crear un componente llamado EjercicioComponent (done)
 
-2. Recibir una prop con el año actual
+2. Recibir una prop con el año actual (done)
 
-3. Ojo, usar funciones para sacar el año
+3. Ojo, usar funciones para sacar el año (done)
 
-4. Usar estados y eventos para tener 2 botones
-    - Pasar al próximo año
-    - Ir al año anterior
-    - Mostrar en todo momento el año por pantalla
+4. Usar estados y eventos para tener 2 botones (done)
+    - Pasar al próximo año (done)
+    - Ir al año anterior (done)
+    - Mostrar en todo momento el año por pantalla (done)
 
-5. Validar que el año sea un número y que sea requerido (prop)
+5. Validar que el año sea un número y que sea requerido (prop) (done)
 
-6. Cambiar el año mediante un input de texto y que se cambie dinámicamente.
+6. Cambiar el año mediante un input de texto y que sea previamente validado y cambie dinámicamente. (done)
