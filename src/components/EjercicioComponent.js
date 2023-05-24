@@ -24,6 +24,19 @@ export const EjercicioComponent = ({year}) => {
     setYearNow(yearActual); 
   }
   
+  // Validar si el dato ingresado en el input es un número entero
+  const cambiarYear = e => {
+    //Con parseInt convertimos el número ingresado por teclado a INTEGER
+    let dato = parseInt(e.target.value);
+
+    //validamos con un if
+    if (Number.isInteger(dato)){
+      setYearNow(dato);
+    } else {
+      setYearNow(year);
+    }
+  }
+
   return (
     <div>
         <h2>Ejercicio con Eventos y useState</h2>
@@ -36,6 +49,13 @@ export const EjercicioComponent = ({year}) => {
         <button onClick={siguiente}>Siguiente</button>
           &nbsp;
         <button onClick={yearActual}>Reset</button>
+        </p>
+        <p>Cambiar año:
+          <input
+              onChange={ cambiarYear }
+              type='text'
+              placeholder='Cambia el año'>
+          </input>
         </p>
     </div>
   )
