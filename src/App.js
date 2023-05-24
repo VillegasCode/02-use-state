@@ -7,6 +7,7 @@ function App() {
   
   // Obtener la fecha
   const fecha = new Date();
+  //Obtener el año actual
   const yearActual = fecha.getFullYear();
   
   return (
