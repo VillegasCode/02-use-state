@@ -4,6 +4,11 @@ import { MiPrimerEstado } from './components/MiPrimerEstado';
 import { EjercicioComponent } from './components/EjercicioComponent';
 
 function App() {
+  
+  // Obtener la fecha
+  const fecha = new Date();
+  const yearActual = fecha.getFullYear();
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -12,7 +17,7 @@ function App() {
        <MiPrimerEstado />
 
 {/* El año tiene que ser una prop del componente */}
-       <EjercicioComponent year={2024}/>
+       <EjercicioComponent year={yearActual}/>
       
       </header>
     </div>
